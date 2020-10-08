@@ -26,7 +26,7 @@ import (
 type secretsService struct {
 }
 
-func (s *secretsService) CreateSecret(context.Context, secrets.Secret) (string, error) {
+func (s *secretsService) CreateSecret(context.Context, secrets.Secret, string) (string, error) {
 	return "", errdefs.ErrNotImplemented
 }
 

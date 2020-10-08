@@ -22,8 +22,8 @@ import (
 	"github.com/docker/compose-cli/api/secrets"
 )
 
-func (b *ecsAPIService) CreateSecret(ctx context.Context, secret secrets.Secret) (string, error) {
-	return b.SDK.CreateSecret(ctx, secret)
+func (b *ecsAPIService) CreateSecret(ctx context.Context, secret secrets.Secret, project string) (string, error) {
+	return b.SDK.CreateSecret(ctx, secret, project)
 }
 
 func (b *ecsAPIService) InspectSecret(ctx context.Context, id string) (secrets.Secret, error) {
